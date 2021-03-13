@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Stat.create(name: 'Strength', description: 'Physical force')
+Stat.create(name: 'Agility', description: 'Being all nimbly')
+Stat.create(name: 'Toughness', description: 'How hard you are to squish')
+Stat.create(name: 'Awareness', description: 'See them first')
+Stat.create(name: 'Cleverness', description: 'Abstract reasoning')
+
