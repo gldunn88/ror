@@ -1,0 +1,28 @@
+// Place all the styles related to the Skill controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+    color:blue;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    border-collapse: collapse;
+}
+
+div.edit_block {
+    border: 1px solid black;
+}
+
+div.field_block {
+    vertical-align: text-top;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div.error_block {
+    color: red;
+}

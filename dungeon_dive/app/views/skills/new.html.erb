@@ -1,0 +1,29 @@
+<h1>Add Skill</h1>
+
+<%= form_with model: @skill do |form|%>
+    <div class="edit_block">
+        <h2>Base Attrributes</h2>
+        <div class="field_block">
+            <%= form.label :name %>: <%= form.text_field :name %> <br>
+            <% @skill.errors.full_messages_for(:name).each do |message| %>
+                <div class="error_block"> <%= message %> </div>
+            <% end %>
+        </div>
+        
+        <div class="field_block">
+            <%= form.label :description %>: <%= form.text_area :description %> <br>
+            <% @skill.errors.full_messages_for(:description).each do |message| %>
+                <div class="error_block"> <%= message %> </div>
+            <% end %>
+        </div>
+
+        <div class="field_block">
+            <%= form.label 'Stat' %>: <%= form.collection_select :stat_id, Stat.all, :id, :name, prompt: true %>
+            <% @skill.errors.full_messages_for(:stat_id).each do |message| %>
+                <div class="error_block"> <%= message %> </div>
+            <% end %>
+        </div>
+    </div>
+    <%= form.submit %>
+
+<% end %>

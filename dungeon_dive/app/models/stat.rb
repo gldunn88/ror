@@ -6,4 +6,8 @@ class Stat < ApplicationRecord
     validates :name, presence: true, uniqueness: true, inclusion: { in: %w(Strength Agility Toughness Cleverness Awareness),
         message: "%{value} is not a valid stat name" }
     validates :description, presence: true
+    
+    def display_name
+        "#{name}"
+    end
 end
